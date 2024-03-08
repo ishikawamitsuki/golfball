@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>解析結果</title>
+</head>
+<body>
+    <h1>解析結果</h1>
+
+    <div id="resultContainer">
+        <!-- 解析結果を表示するための要素 -->
+        <p id="analysisResult"></p>
+    </div>
+
+    <button id="analyzeButton">解析</button>
+    <button id="indexButton">ホームに戻る</button>
+
+    <script>
+        document.getElementById('analyzeButton').onclick = function() {
+            // 解析ボタンが押されたときにランダムなゴルフの距離を表示
+            var min = 150; // 最小値（ヤード）
+            var max = 300; // 最大値（ヤード）
+            var distance = Math.floor(Math.random() * (max - min + 1)) + min; // minからmaxまでのランダムな整数
+            document.getElementById('analysisResult').textContent = "ゴルフの距離：" + distance + "ヤード";
+        }
+
+        document.getElementById('indexButton').onclick = function() {
+            // ホームボタンを押したときにホームページに移動する
+            location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
