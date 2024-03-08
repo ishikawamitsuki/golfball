@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <video id="videoPlayer" controls></video>
+
+    <div id="buttonContainer">
+        <button id="indexButton" class="styledButton">ホーム</button>
+        <button id="backButton" class="styledButton">戻る</button>
+        <button id="recordButton" class="styledButton">動画を撮影</button>
+        <button id="analyzeButton" class="styledButton">進む（解析）</button>
+    </div>
+
+    <script>
+        document.getElementById('indexButton').onclick = function() {
+            // ホームボタンの動作をここに書く
+            location.href = "index.html";
+        }
+
+        document.getElementById('backButton').onclick = function() {
+            // 戻るボタンの動作をここに書く
+            history.back();
+        }
+
+        document.getElementById('recordButton').onclick = function() {
+            // 動画を撮影ボタンの動作をここに書く
+            if (video.srcObject) {
+                video.play(); // videoがストリームを受け取っていれば再生
+            }
+        }
+
+        document.getElementById('analyzeButton').onclick = function() {
+            // 進む（解析）ボタンの動作をここに書く
+            location.href = "result.html"
+        }
+    </script>
+</body>
+</html>
