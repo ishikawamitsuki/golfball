@@ -137,24 +137,20 @@ button {
 
 /* スマートフォン向けのスタイル */
 @media (max-width: 600px) {
-    body {
-        font-size: 18px;
-    }
-
     button {
-        padding: 10px 20px;
-        font-size: 14px;
+        padding: 20px 40px; /* パディングを大きくします */
+        font-size: 20px; /* フォントサイズを大きくします */
     }
 }
 
 /* タブレット向けのスタイル */
 @media (min-width: 601px) and (max-width: 900px) {
-    body {
-        font-size: 20px;
-    }
-
     button {
-        padding: 12px 24px;
-        font-size: 16px;
+        padding: 15px 30px; /* パディングを適度に大きくします */
+        font-size: 18px; /* フォントサイズを適度に大きくします */
     }
+}
+
+button {
+    margin: 10px; /* ボタン周囲のマージンを設定 */
 }
